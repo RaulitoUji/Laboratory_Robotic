@@ -1,0 +1,17 @@
+from GUI import GUI
+from HAL import HAL
+# Enter sequential code!
+import cv2
+i = 0
+while True:
+    # Enter iterative code!
+    img = HAL.getImage()
+    hsv=cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    red__mask=cv2.inRange(hsv,
+                          (0, 125,  125),
+                          (30, 255 , 255))
+    
+    
+    GUI.showImage(red__mask)
+    print(i)
+    i=i+1  
