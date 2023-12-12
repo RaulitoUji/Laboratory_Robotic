@@ -22,7 +22,7 @@ while True:
         cX, cY = 0,0
     if cX>0:
       err = 320 - cX
-      HAL.setV(2)
+      HAL.setV(1.5)
       HAL.setW(0.001 * err)
     GUI.showImage(red_mask)
     print('%d cX: %.2f cy: %.2f' % (i,cX,cY))
